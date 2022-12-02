@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Detail from "./detail";
-import {uploadData, uploadFile} from "./dbOperation"
+import { writeData, uploadFile } from "./dbOperation";
 
 function UploadData() {
   const [imageUpload, setImageUpload] = useState(null);
@@ -11,25 +11,21 @@ function UploadData() {
   const [color, setColor] = useState(null);
   const [size, setSize] = useState(0);
   const [imageUrl, setImageUrl] = useState(null);
-  const shop_data = {name: name, price: price, color: color, size:size, description:description, img:imageUrl}
-
-
-
-  // useEffect(() => {
-  //   listAll(imagesListRef).then((response) => {
-  //     response.items.forEach((item) => {
-  //       getDownloadURL(item).then((url) => {
-  //         setImageUrls((prev) => [...prev, url]);
-  //       });
-  //     });
-  //   });
-  // }, []);
+  const shop_data = {
+    name: name,
+    price: price,
+    color: color,
+    size: size,
+    description: description,
+    img: imageUrl,
+  };
 
   useEffect(() => {
-    if(imageUrl){
-    uploadData(shop_data)
+    if (imageUrl) {
+      writeData(shop_data);
     }
-  }, [imageUrl])
+  }, [imageUrl]);
+
   return (
     <div className="App">
       <div className="container-fluid py-5">
@@ -71,7 +67,7 @@ function UploadData() {
                 type="submit"
                 className="btn btn-primary btn-lg btn-block"
                 onClick={async (e) => {
-                  await uploadFile(e, imageUpload,setImageUrl);
+                  await uploadFile(e, imageUpload, setImageUrl);
                 }}
               >
                 Submit

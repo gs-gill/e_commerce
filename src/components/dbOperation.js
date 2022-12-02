@@ -2,13 +2,13 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { storage, db } from "../firebase";
 
-async function uploadData(data){
+async function writeData(data){
 
 try {
   const docRef = await addDoc(collection(db, "shop"),data);
 
   console.log("Document written with ID: ", docRef.id);
-  console.log("json data", data)
+  alert('Data successfully added to database')
   window.location.reload();
 } catch (e) {
   console.error("Error adding document: ", e);
@@ -33,9 +33,8 @@ await getDocs(collection(db, "shop")).then((querySnapshot) => {
     ...doc.data(),
     id: doc.id,
   }));
-  console.log("data from db", newData);
   setShopData(newData)
 });
 };
 
-export {uploadData, fetchPost, uploadFile}
+export {writeData, fetchPost, uploadFile}

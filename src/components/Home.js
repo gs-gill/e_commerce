@@ -10,7 +10,6 @@ function Home() {
   
   useEffect(() => {
     fetchPost(setShopData)
-    console.log('data = ', shopData)
   }, [])
 
     return(
