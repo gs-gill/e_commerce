@@ -10,13 +10,12 @@ const CardList = ({data}) =>{
           <h5 className="card-title">{data.name}</h5>
           <h6 className="card-subtitle mb-2 text-muted">{}</h6>
         </div>
-          <span>${data.price}</span>
+          
         </div>
         </div>
         <div className="card-footer">
-          <div className="d-flex justify-content-between px-2 fs-4">
-            <span><i className="bi bi-heart"></i></span>
-            <span><i className="bi bi-cart3"></i></span>
+          <div className="d-flex justify-content-center px-2 fs-4">
+          <span>₹{data.price}</span>
           </div>
         </div>
         </div>

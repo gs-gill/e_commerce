@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./style/style.css"
-import "bootstrap-icons/font/bootstrap-icons.css"
+import "bootstrap/dist/js/bootstrap.min.js";
+import "./style/style.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 const TopNav = () => {
     return (
   
@@ -11,16 +12,9 @@ const TopNav = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className=" collapse navbar-collapse flex-row-reverse fs-4 justify-content-between align-item-center" id="nav_right">
-            <ul className="navbar-nav gap-3">
-                <li className="nav-item">
-                    <div className="input-group">
-                        <input type="text" placeholder="Search..."/>
-                        <button className="btn btn-outline-secondary"><i className="bi bi-search"></i></button>
-                    </div>
-                </li>
-                <li className="nav-item"><i className="bi bi-telephone-forward"></i></li>
-                <li className="nav-item">+91-9882211012</li>
-            </ul>
+            <div className="navbar-nav gap-3 pt-3 d-flex flex-row">
+                    <div className="nav-item"><i className="bi bi-telephone-forward"></i></div> <div> +91-9882211012 </div>
+            </div>
         </div>
     </div>
     </nav>

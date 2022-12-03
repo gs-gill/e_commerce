@@ -5,6 +5,7 @@ import './index.css';
 import Home from './components/Home'
 import Layout from './components/Layout'
 import UploadData from './components/UploadData'
+import DeleteData from './components/DeleteData'
 import reportWebVitals from './reportWebVitals';
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="upload_data" element={<UploadData />} />
+          <Route path="delete_data" element={<DeleteData />} />
         </Route>
       </Routes>
     </BrowserRouter>

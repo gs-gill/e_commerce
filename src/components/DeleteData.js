@@ -1,11 +1,10 @@
-import TopNav from './TopNav'
-import CardList from './CardList'
+import DeleteList from './DeleteList'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style/style.css"
 import {fetchPost} from './dbOperation'
 import { useState, useEffect } from "react";
 
-function Home() {
+function DeleteData() {
   const [shopData, setShopData] = useState([])
   
   useEffect(() => {
@@ -14,15 +13,14 @@ function Home() {
 
     return(
       <>
-      <TopNav></TopNav>
       <div className='container py-2'>
-        <div className='row gap-3 card-row'>
-          {shopData.map((detail) => <CardList data={detail}></CardList>)}
+        <div className='row gap-3'>
+          {shopData.map((detail) => <DeleteList data={detail} key={detail.id} id={detail.id}></DeleteList>)}
         </div>
       </div>
       </>
     )
   };
   
-  export default Home;
+  export default DeleteData;
   

@@ -12,6 +12,10 @@ body{
         color:white;
     }
 
+    .delete-item-btn{
+        width: 100%;
+    }
+
     
     /*
     below is for laptop
@@ -30,20 +34,7 @@ body{
     and (min-device-width : 320px)   
     and (max-device-width : 640px)  
     {
-    #left-menu{
-        display: none;
-    }
-    .chatbox{
-        margin: 0;
-        height: 86vh!important;
-    }
-    #chat-user-icon{
-        display: block!important;
-    }
-    #user_detail{
-        display: grid!important;
-    }
-    #left-side, #right-side{
-        width: 60%;
-    }
+        .card-row{
+            justify-content: center;
+        }
     }
