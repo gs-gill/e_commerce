@@ -16,6 +16,16 @@ body{
         width: 100%;
     }
 
+    .card-img-top{
+        height: 24rem;
+    }
+.product-img{
+    max-width: 32rem;
+}
+.product-name{
+    text-decoration: unset;
+    color: black;
+}
     
     /*
     below is for laptop

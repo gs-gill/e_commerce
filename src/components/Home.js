@@ -17,7 +17,9 @@ function Home() {
       <TopNav></TopNav>
       <div className='container py-2'>
         <div className='row gap-3 card-row'>
-          {shopData.map((detail) => <CardList data={detail}></CardList>)}
+          {shopData.map((detail) =>
+           <CardList href={"product/"+detail.id} data={detail}></CardList>
+           )}
         </div>
       </div>
       </>

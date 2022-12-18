@@ -7,6 +7,7 @@ import Layout from './components/Layout'
 import UploadData from './components/UploadData'
 import DeleteData from './components/DeleteData'
 import reportWebVitals from './reportWebVitals';
+import Product from './components/product';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="upload_data" element={<UploadData />} />
           <Route path="delete_data" element={<DeleteData />} />
+          <Route path="product/:id" element={<Product></Product>}/>
         </Route>
       </Routes>
     </BrowserRouter>
